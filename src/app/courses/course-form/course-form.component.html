@@ -1,9 +1,27 @@
-<form [formGroup]="formCourse">
-  <mat-form-field>
-    <input matInput placeholder="Nome" formControlName="name"/>
-  </mat-form-field>
+<div style="width: 100%; margin-top:10px;">
+  <mat-card style="width: 50%; margin:auto; ">
+    <mat-toolbar color="primary">
+      <mat-card-title>Criar novo curso</mat-card-title>
+    </mat-toolbar>
+    <mat-card-content>
+    <form [formGroup]="formCourse" >
+      <mat-form-field style="width: 100%;">
+        <input matInput placeholder="Nome" formControlName="name" />
+      </mat-form-field>
 
-  <mat-form-field>
-    <input matInput placeholder="Categoria" formControlName="category"/>
-  </mat-form-field>
-</form>
+      <mat-form-field style="width: 100%;">
+        <mat-label >Categoria</mat-label>
+        <mat-select formControlName="category" >
+          <mat-option value="null"></mat-option>
+          <mat-option value="Back-end">Back-end </mat-option>
+          <mat-option value="Front-end">Fron-end</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+  </mat-card>

@@ -5,3 +5,15 @@
   padding: 5px;
   background-color: rgb(0,0,0,0.04);
 }
+mat-card{
+  width: 70%;
+  margin:auto;
+  text-align: center;
+
+}
+
+.column-flex{
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
