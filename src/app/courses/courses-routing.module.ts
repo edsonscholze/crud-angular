@@ -4,8 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { CoursesComponent } from './courses/courses.component';
 
-const routes: Routes = [{ path: '', component: CoursesComponent },
-{ path: 'new', component: CourseFormComponent }];
+const routes: Routes = [
+  { path: '', component: CoursesComponent },
+  { path: 'new', component: CourseFormComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
