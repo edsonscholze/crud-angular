@@ -5,7 +5,7 @@
     </p>
     <div class="mat-elevation-z8 column-flex">
       <app-courses-list *ngIf="courses$ | async as courses; else loading"
-       [courses]="courses" (add)="onAdd()">
+       [courses]="courses" (edit)="onEdit($event)" (add)="onAdd()">
       </app-courses-list>
 
 

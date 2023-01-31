@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Course } from './../model/course';
+import { Course } from '../../model/course';
 
 @Component({
   selector: 'app-courses-list',
@@ -10,6 +10,8 @@ export class CoursesListComponent {
 
   @Input() courses :Course[] = [];
   @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
+
   readonly displayedColumns = ['name', 'category', 'actions'];
 
   constructor(){
@@ -22,6 +24,10 @@ export class CoursesListComponent {
 
   onDelete(){
     this.add.emit(true);
+  }
+
+  onEdit(course:Course){
+    this.edit.emit(course);
   }
 
 }
