@@ -28,6 +28,7 @@ export class CourseFormComponent {
   ) {
 
     const course: Course = this.route.snapshot.data['course'];
+
     this.formCourse.setValue({
       _id: course._id,
       name: course.name,
@@ -46,6 +47,7 @@ export class CourseFormComponent {
       (error) => this.onError('Erro ao salvar curso')
     );
   }
+
 
   private onError(msg:string) {
     this.snackBar.open(msg, 'Atenção!', {duration:3000}) ;
