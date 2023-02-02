@@ -8,4 +8,4 @@ const PROXY_CONFIG = [
 ];
 
 module.exports = PROXY_CONFIG;
-//parametro secure: mudar para true apenas em produção usando SSL, certificado para https
+//parametro secure: mudar para true apenas em produção usando SSL, certificado para https   
